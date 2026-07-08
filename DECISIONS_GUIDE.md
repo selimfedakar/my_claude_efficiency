@@ -68,7 +68,7 @@ Threshold heuristic: *"Would a smart newcomer plausibly propose the alternative?
 
 ## Workflow: session journal → decision log
 
-Selim's projects already keep per-session build journals (`docs/sessions/NN-title.md`). The pipeline:
+My projects already keep per-session build journals (`docs/sessions/NN-title.md`). The pipeline:
 
 1. **During the session:** decisions happen inside the work; the session report captures them narratively with the required decision-log-with-rejected-alternatives section.
 2. **End of session (2 minutes):** extract each decision that meets the threshold into a `D-NNN` entry in DECISIONS.md. Copy, condense, cross-link: session report gets `→ D-NNN`, entry gets `(see docs/sessions/NN)`.
@@ -115,6 +115,3 @@ That paragraph converts the log from passive archive into an active guardrail.
 **Revisit if:** <Concrete condition under which this should be reopened.>
 ```
 
----
-
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` knowledge-distillation set.*
