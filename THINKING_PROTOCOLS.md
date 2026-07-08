@@ -120,4 +120,4 @@ Without this paragraph the protocols are decoration — a model only follows wha
 
 ---
 
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` set, layer 2: cognition transfer. These protocols are the written form of what stronger models do unprompted; following them mechanically closes most of the day-to-day gap.*
+*These protocols are the written form of what stronger models do unprompted; following them mechanically closes most of the day-to-day gap.*
