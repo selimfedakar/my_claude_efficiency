@@ -104,4 +104,4 @@ Cost: 3–5 minutes. It is the last chance to catch a below-bar output while it'
 
 ---
 
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` set, layer 2: cognition transfer. This rubric encodes what a stronger model checks implicitly before speaking; run it explicitly and the output converges toward that bar.*
+*This rubric encodes what a stronger model checks implicitly before speaking; run it explicitly and the output converges toward that bar.*
