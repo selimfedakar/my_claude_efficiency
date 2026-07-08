@@ -47,7 +47,7 @@ description: Write the end-of-session build journal entry and update project doc
 
 4. **Gates between phases.** After any step that can fail (build, test, upload), an explicit gate: what output means success, what to do on failure. Weaker models plow through failures unless told to stop — gates are where recipe-following beats improvisation.
 
-5. **Embed the owner's rules inline where they bite.** Don't rely on CLAUDE.md being remembered mid-workflow: "Step 7: Output the commit plan as commands for Selim to run. Do NOT run git commit yourself — hard rule, all projects."
+5. **Embed the owner's rules inline where they bite.** Don't rely on CLAUDE.md being remembered mid-workflow: "Step 7: Output the commit plan as commands for the owner to run. Do NOT run git commit yourself — hard rule, all projects."
 
 6. **Include the output format literally.** If the skill produces a document (session report, commit plan), embed the exact skeleton in the skill body. Format drift disappears when the format is in the recipe.
 
@@ -142,6 +142,3 @@ Walk each workflow once with the strong model, capture every micro-decision it m
 - When PATTERNS.md gains an entry that affects a workflow (e.g. a new store-rejection fix), update the corresponding skill's preflight in the same session.
 - Version-sensitive commands (EAS profiles, Xcode images) should say where the canonical value lives rather than hardcoding twice: "use the image pinned in eas.json — do not override".
 
----
-
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` knowledge-distillation set.*
