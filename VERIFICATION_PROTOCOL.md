@@ -100,6 +100,3 @@ This is what makes the next session (possibly a weaker model, possibly months la
 5. Three buckets in every report: Verified / Assumed / Unknown. Banned: "should work".
 6. Failure reported as failure, with best hypothesis — never dressed as success.
 
----
-
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` set, layer 2: cognition transfer.*
