@@ -135,6 +135,3 @@ An item often flows: Open question → decision meeting → D-entry in DECISIONS
 - <question> — <who decides, what it blocks>.
 ```
 
----
-
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` knowledge-distillation set.*
