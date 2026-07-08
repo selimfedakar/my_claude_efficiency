@@ -103,6 +103,3 @@
 - Every bug that escapes to production or to the owner's manual testing = a missing checklist item. Add it within the same session, in the right severity section, referencing its P-entry.
 - Once a quarter, prune: any item that has never produced a finding in ~10 reviews is either always-followed (keep if cheap) or irrelevant (delete).
 
----
-
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` knowledge-distillation set.*
