@@ -76,7 +76,7 @@ The most valuable section. Every entry has the shape: **prohibition + reason + w
 ## Landmines
 - Do NOT use absolute positioning for chat composers. It breaks with the keyboard on iOS.
   Use `KeyboardAvoidingView` + `useHeaderHeight()` — the ONLY pattern that works here (cost us 2 sessions to learn).
-- Do NOT run `git commit` or `git push`. Ever. Hand the exact commands to Selim; he runs them. Commits carry no AI signature.
+- Do NOT run `git commit` or `git push`. Ever. Hand the exact commands to the owner; they run them. Commits carry no AI signature.
 - Do NOT rename anything in `AppShortcuts.swift` — names are user-facing Siri phrases; renaming breaks users' existing shortcuts.
 ```
 
@@ -182,6 +182,3 @@ Sixty seconds of maintenance per session keeps the file alive. An unmaintained C
 - docs/DECISIONS.md · docs/PATTERNS.md · docs/REVIEW-CHECKLIST.md · docs/ROADMAP.md
 ```
 
----
-
-*Authored by Claude Fable 5 (claude-fable-5) for Selim Fedakar — 2026-07-07. Part of the `claude_efficiency` knowledge-distillation set: high-capability model writes the thinking down so any future model can pick it up.*
