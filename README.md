@@ -10,7 +10,7 @@ Layer 2 in one picture — every substantial piece of work passes through this b
 
 ```mermaid
 flowchart LR
-    A([Task]) --> B["🧠 THINK<br/>T1–T8 protocols<br/><i>read before write · 3 hypotheses ·<br/>root cause · least mechanism</i>"]
+    A([Task]) --> B["🧠 THINK<br/>T1–T9 protocols<br/><i>read before write · 3 hypotheses ·<br/>root cause · least mechanism · verify state</i>"]
     B --> C["⚙️ Draft<br/>code + report"]
     C --> D["🔬 VERIFY<br/>L0–L3 ladder<br/><i>exercised & observed,<br/>not 'should work'</i>"]
     D --> E{"⚖️ SELF-REVIEW<br/>D1–D8 rubric<br/><i>skeptical senior tester</i>"}
@@ -26,7 +26,7 @@ Project-independent thinking procedures. This is the distilled part: the habits 
 
 | File | What it forces | When it runs |
 |---|---|---|
-| [THINKING_PROTOCOLS.md](THINKING_PROTOCOLS.md) | T1–T8: read-before-write, 3-hypothesis debugging, root-cause gate, altitude check, least mechanism, assumption ledger, edge-case grid, constraint refresh | During the work |
+| [THINKING_PROTOCOLS.md](THINKING_PROTOCOLS.md) | T1–T9: read-before-write, 3-hypothesis debugging, root-cause gate, altitude check, least mechanism, assumption ledger, edge-case grid, constraint refresh, verify-state-before-acting | During the work |
 | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) | Definition of done in levels L0–L3, evidence tables with pasted output, regression sweeps, Verified/Assumed/Unknown reporting — bans "should work" | Before claiming "done" |
 | [FABLE_BAR_RUBRIC.md](FABLE_BAR_RUBRIC.md) | Self-review as a skeptical senior tester: 8 graded dimensions, a smell list, a pass bar, fix-before-present loop | Before I see anything |
 

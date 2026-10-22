@@ -2,7 +2,7 @@
 
 > **Purpose of this document:** The six project files (CLAUDE.md, DECISIONS, PATTERNS, skills, checklist, roadmap) transfer *knowledge*. This file transfers *cognition*. A strong model does the things below implicitly, without being asked. A weaker model does them reliably **only when they are written as mandatory procedure**. This file is that procedure.
 >
-> **How to use:** This file is project-independent. Reference it from every project's CLAUDE.md with the loading paragraph at the bottom. The protocols are numbered T1–T8; other files (rubric, verification) refer to them by ID.
+> **How to use:** This file is project-independent. Reference it from every project's CLAUDE.md with the loading paragraph at the bottom. The protocols are numbered T1–T9; other files (rubric, verification) refer to them by ID.
 >
 > **The core insight:** Most of the quality gap between a stronger and weaker model is not raw intelligence — it is *discipline under uncertainty*: the strong model refuses to act before understanding, holds multiple hypotheses, and distrusts its own first answer. Every protocol below converts one of those habits into an explicit, checkable step.
 
@@ -103,6 +103,20 @@ Weak models forget standing rules as the session grows — the rules scroll out 
 
 ---
 
+## T9 — Verify state before acting (the anti-assumed-world rule)
+
+Weak models act on a *belief* about the world — "we need to get access", "X doesn't exist yet", "it isn't deployed", "someone has to grant this" — and then build work, ask the user, or open a multi-party negotiation on top of that belief. Often the belief is already false: the access exists, the file is there, the secret is set, the thing is done. One cheap read would have shown it. Acting first turns a one-second check into hours of coordination or redundant building.
+
+**Procedure:**
+1. The moment a task rests on a *state assumption* — access/permission, existence of a repo/file/endpoint/asset, deployment or config status, or "is this already done" — run the cheapest authoritative read **first**, before any action, request, or coordination: `gh api` / repo permission, `ls`/`grep`/`find`, `curl .../health`, `git status`, `fly apps list`, open the config file.
+2. Prefer authoritative tool output over second-hand belief — "I think", "I remember", a stale memory, or what a teammate assumes. Verify, don't relay.
+3. Never hand the user a plan to request, create, or coordinate something a tool can confirm or resolve instantly. Check whether it already exists; coordinate only for what is genuinely missing.
+4. Cost test: if being wrong would cost human round-trips or rebuilding something that already exists, the read is mandatory, not optional.
+
+*Origin: a session where multi-round "get admin access from the team" instructions were drafted while the user was already ADMIN on every repo — one `gh repo list --json viewerPermission` settled it instantly.*
+
+---
+
 ## Loading paragraph (paste into every project's CLAUDE.md)
 
 ```md
@@ -112,7 +126,8 @@ any bug → T2 (3 hypotheses + evidence before fix) and search docs/PATTERNS.md 
 any edit to existing code → T1 (read + call sites);
 any non-trivial feature → T4 altitude check + T7 edge grid;
 any fix → T3 root-cause gate; any design → T5 least-mechanism order;
-multi-step task → T6 assumption ledger; before any commit plan/report → T8 rule refresh.
+multi-step task → T6 assumption ledger; before any commit plan/report → T8 rule refresh;
+any state assumption (access/exists/deployed/already-done) → T9 verify with a cheap read BEFORE acting, requesting, or coordinating.
 Before presenting substantial work, self-grade with ~/claude_efficiency/FABLE_BAR_RUBRIC.md.
 ```
 
